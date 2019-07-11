@@ -22,5 +22,13 @@
 		"data_type": "APPLICATION/JSON",
 		"args": "ars",
 		"expect_res": "expect_res"
+	},
+	"case_3": {
+		"url": "www.baidu.com",
+		"headers": "headers",
+		"method": "POST",
+		"data_type": "APPLICATION/JSON",
+		"args": "ars",
+		"expect_res": "expect_res"
 	}
 }
