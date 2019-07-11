@@ -1,259 +1,72 @@
-[2019-07-10 14:24:38] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 14:24:38] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 14:27:16] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 14:27:19] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-10 14:27:19] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 14:28:53] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 14:28:53] INFO [setUpClass: basecase.py, 15] [{'case_name': 'test1', 'name': 'jack', 'password': 'Iloverose'}, {'name': 'jack', 'password': 'Iloverose'}, {'name': 'rose', 'password': 'Ilovejack'}, {'name': 'tom', 'password': 'password123'}]
-[2019-07-10 14:28:53] INFO [test_weak_password: test_case.py, 13] Iloverose
-[2019-07-10 14:28:53] INFO [test_weak_password: test_case.py, 13] Iloverose
-[2019-07-10 14:28:53] INFO [test_weak_password: test_case.py, 13] Ilovejack
-[2019-07-10 14:28:53] INFO [test_weak_password: test_case.py, 13] password123
-[2019-07-10 14:28:54] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-10 14:28:54] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 14:53:40] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 14:53:40] INFO [setUpClass: basecase.py, 15] [{'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}]
-[2019-07-10 14:53:40] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:00:02] INFO [setUpClass: basecase.py, 15] [{'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}]
-[2019-07-10 15:00:37] INFO [setUpClass: basecase.py, 15] [{'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}]
-[2019-07-10 15:00:54] INFO [setUpClass: basecase.py, 16] [{'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}]
-[2019-07-10 15:01:30] INFO [setUpClass: basecase.py, 15] {'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:01:43] INFO [setUpClass: basecase.py, 16] {'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:02:13] INFO [setUpClass: basecase.py, 16] {'case_name': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:05:09] INFO [setUpClass: basecase.py, 16] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:05:15] INFO [setUpClass: basecase.py, 16] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:05:45] INFO [setUpClass: basecase.py, 16] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:06:08] INFO [setUpClass: basecase.py, 16] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:09:11] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:09:19] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:10:38] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:10:38] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:10:38] INFO [test_dummy: test_case.py, 21] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 15:10:38] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:18:26] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:18:26] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:18:26] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:19:44] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:19:44] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:19:44] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:22:09] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:22:09] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:22:09] INFO [test_dummy: test_case.py, 21] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 15:22:09] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:23:46] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:23:46] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:23:46] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:24:38] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:24:38] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:24:38] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:26:53] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:26:53] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:26:53] INFO [test_dummy: test_case.py, 22] www.baidu.com
-[2019-07-10 15:26:53] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:27:01] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:27:01] INFO [test_dummy: test_case.py, 22] www.baidu.com
-[2019-07-10 15:27:53] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:27:53] INFO [test_dummy: test_case.py, 22] www.baidu.com
-[2019-07-10 15:58:44] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:58:44] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:58:44] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 15:59:54] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 15:59:54] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 15:59:54] INFO [send_request: basecase.py, 32] None
-[2019-07-10 15:59:54] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:01:54] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:01:54] INFO [test_send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:02:57] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:02:57] INFO [test_send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:03:20] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:03:20] INFO [test_send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:03:33] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:03:33] INFO [test_send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:03:33] INFO [test_send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:06:13] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:06:13] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:06:13] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:07:10] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:07:10] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:07:10] INFO [send_request: basecase.py, 32] None
-[2019-07-10 16:07:10] INFO [send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:07:10] INFO [send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:07:10] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:08:23] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:08:23] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:08:23] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:10:15] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:10:15] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:10:15] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:12:04] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:12:04] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:12:04] INFO [send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:12:04] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:12:54] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:12:54] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:12:54] INFO [send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:12:54] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:13:19] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:13:19] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:13:19] INFO [send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:13:19] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:14:09] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:14:09] INFO [setUpClass: basecase.py, 15] {'case_1': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}, 'case_2': {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}}
-[2019-07-10 16:14:09] INFO [send_request: basecase.py, 32] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:14:09] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:15:04] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:15:04] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:15:04] INFO [send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:15:04] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:15:22] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:15:22] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:15:22] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:15:58] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:15:58] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:15:58] INFO [send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:15:58] INFO [send_request: basecase.py, 41] ars
-[2019-07-10 16:15:58] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:16:36] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:16:36] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:16:36] INFO [send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:16:36] INFO [send_request: basecase.py, 41] ars
-[2019-07-10 16:16:36] INFO [send_request: basecase.py, 42] headers
-[2019-07-10 16:16:36] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:17:00] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:17:00] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:17:00] INFO [send_request: basecase.py, 40] www.baidu.com
-[2019-07-10 16:17:00] INFO [send_request: basecase.py, 41] ars
-[2019-07-10 16:17:00] INFO [send_request: basecase.py, 42] headers
-[2019-07-10 16:17:00] INFO [send_request: basecase.py, 43] APPLICATION/JSON
-[2019-07-10 16:17:00] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:17:41] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:17:41] INFO [send_request: basecase.py, 31] {'url': 'www.baidu.com', 'headers': 'headers', 'method': 'POST', 'data_type': 'APPLICATION/JSON', 'args': 'ars', 'expect_res': 'expect_res'}
-[2019-07-10 16:17:41] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:29:59] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 38] https://www.baidu.com/
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 39] 
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:29:59] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:29:59] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:34:16] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 38] https://www.baidu.com/
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:34:16] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:34:16] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:35:02] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:35:02] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:35:02] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:35:38] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:35:38] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 16:35:38] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 16:35:38] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 16:35:38] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=e2033926738 HTTP/1.1" 200 None
-[2019-07-10 16:35:38] INFO [send_request: basecase.py, 47] <Response [200]>
-[2019-07-10 16:35:38] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:38:17] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:38:17] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:38:17] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 16:38:17] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 16:38:17] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 16:38:18] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=t2193060733 HTTP/1.1" 200 None
-[2019-07-10 16:38:18] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 16:38:18] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 16:38:56] INFO [<module>: run_all.py, 8] ================================== 测试开始 ==================================
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 42] 
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 16:38:56] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 16:38:56] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 16:38:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 16:38:56] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=l2231725511 HTTP/1.1" 200 None
-[2019-07-10 16:38:56] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 16:38:56] INFO [<module>: run_all.py, 13] ================================== 测试结束 ==================================
-[2019-07-10 17:12:56] INFO [run: run.py, 11] ================================== 测试开始 ==================================
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 42] 200
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 17:12:56] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 17:12:56] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 17:12:56] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 17:12:56] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=d0671250639 HTTP/1.1" 200 None
-[2019-07-10 17:12:56] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 17:12:56] INFO [run: run.py, 16] ================================== 测试结束 ==================================
-[2019-07-10 17:13:46] INFO [run: run.py, 11] ================================== 测试开始 ==================================
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 42] 200
-[2019-07-10 17:13:46] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 17:13:46] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 17:13:46] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 17:13:46] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 17:13:47] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=h0721953107 HTTP/1.1" 200 None
-[2019-07-10 17:13:47] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 17:13:47] INFO [run: run.py, 16] ================================== 测试结束 ==================================
-[2019-07-10 17:15:36] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 42] 200
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 17:15:36] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 17:15:36] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 17:15:36] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 17:15:36] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=f0831675564 HTTP/1.1" 200 None
-[2019-07-10 17:15:36] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 17:15:36] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-10 17:17:43] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 42] 200
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 17:17:43] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 17:17:43] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 17:17:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 17:17:43] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=e0958494464 HTTP/1.1" 200 None
-[2019-07-10 17:17:43] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 17:17:43] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-10 17:35:21] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 38] https://tieba.baidu.com/present/getForumRank
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 39] {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 40] {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36'}
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 41] FROM
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 42] 200
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 43] GET
-[2019-07-10 17:35:21] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-10 17:35:21] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-10 17:35:21] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-10 17:35:21] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=f2016406471 HTTP/1.1" 200 None
-[2019-07-10 17:35:21] INFO [send_request: basecase.py, 47] 200
-[2019-07-10 17:35:21] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 11:04:01] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 11:04:01] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 11:04:04] INFO [send_email: send_email.py, 26] 邮件发送完成！
+[2019-07-11 11:05:25] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 11:05:25] INFO [send_request: basecase.py, 41] url = https://tieba.baidu.com/present/getForumRank,args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
+[2019-07-11 11:05:25] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
+[2019-07-11 11:05:25] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
+[2019-07-11 11:05:25] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
+[2019-07-11 11:05:25] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=o0221094702 HTTP/1.1" 200 None
+[2019-07-11 11:05:25] INFO [send_request: basecase.py, 50] 200
+[2019-07-11 11:05:25] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 11:05:27] INFO [send_email: send_email.py, 26] 邮件发送完成！
+[2019-07-11 11:15:59] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 11:15:59] INFO [send_request: basecase.py, 42] url = https://tieba.baidu.com/present/getForumRank+ 
+ + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
+ + method = GET
+[2019-07-11 11:15:59] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
+[2019-07-11 11:15:59] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
+[2019-07-11 11:15:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
+[2019-07-11 11:16:02] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=a0854848492 HTTP/1.1" 200 None
+[2019-07-11 11:16:02] INFO [send_request: basecase.py, 56] 200
+[2019-07-11 11:16:02] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 11:16:43] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 11:16:43] INFO [send_request: basecase.py, 42] url = www.sina.com+ 
+ + args =  + 
+ + method = get
+[2019-07-11 11:16:43] INFO [send_request: basecase.py, 42] url = https://tieba.baidu.com/present/getForumRank+ 
+ + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
+ + method = GET
+[2019-07-11 11:16:43] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
+[2019-07-11 11:16:43] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
+[2019-07-11 11:16:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
+[2019-07-11 11:16:43] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=q0899092156 HTTP/1.1" 200 None
+[2019-07-11 11:16:43] INFO [send_request: basecase.py, 56] 200
+[2019-07-11 11:16:43] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 11:28:28] INFO [send_email: send_email.py, 26] 邮件发送完成！
+[2019-07-11 11:30:00] INFO [send_email: send_email.py, 26] 邮件发送完成！
+[2019-07-11 14:15:07] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 14:15:07] INFO [send_request: base_case.py, 40] url = http://api.juheapi.com/japi/toh+ 
+ + args =  + 
+ + method = get
+[2019-07-11 14:15:07] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): api.juheapi.com:80
+[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] http://api.juheapi.com:80 "GET /japi/toh HTTP/1.1" 200 73
+[2019-07-11 14:15:09] INFO [send_request: base_case.py, 45] 200
+[2019-07-11 14:15:09] INFO [send_request: base_case.py, 40] url = https://tieba.baidu.com/present/getForumRank+ 
+ + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
+ + method = GET
+[2019-07-11 14:15:09] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
+[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
+[2019-07-11 14:15:09] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
+[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=c0804833051 HTTP/1.1" 200 None
+[2019-07-11 14:15:09] INFO [send_request: base_case.py, 49] 200
+[2019-07-11 14:15:09] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-11 14:38:35] INFO [run: run.py, 12] ================================== 测试开始 ==================================
+[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = www.sina.com+ 
+ + args =  + 
+ + method = get
+[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = http://api.juheapi.com/japi/toh+ 
+ + args =  + 
+ + method = get
+[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): api.juheapi.com:80
+[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] http://api.juheapi.com:80 "GET /japi/toh HTTP/1.1" 200 73
+[2019-07-11 14:38:35] INFO [send_request: base_case.py, 45] 200
+[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = https://tieba.baidu.com/present/getForumRank+ 
+ + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
+ + method = GET
+[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
+[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
+[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
+[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=w2210497238 HTTP/1.1" 200 None
+[2019-07-11 14:38:35] INFO [send_request: base_case.py, 49] 200
+[2019-07-11 14:38:35] INFO [run: run.py, 17] ================================== 测试结束 ==================================

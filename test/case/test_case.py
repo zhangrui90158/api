@@ -8,10 +8,16 @@ from data_driver_interface_framework.test.case.base_case import BaseCaseData
 class PasswordWithJsonTestCase(BaseCaseData):
 
     def test_test(self):
-        self.send_request("baidu")
+        case_data = self.get_case_data("baidu")
+        self.send_request(case_data)
 
     def test_case(self):
-        self.send_request("case")
+        case_data = self.get_case_data("case")
+        self.send_request(case_data)
+
+    def test_get_day(self):
+        case_data = self.get_case_data("get_day")
+        self.send_request(case_data)
 
     def test_weak_password(self):
         self.assertEqual(1, 2)

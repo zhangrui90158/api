@@ -1,7 +1,0 @@
-[
-  {"case_name":"test1","url":"www.baidu.com","headers":"headers","method":"POST","data_type":"APPLICATION/JSON","args":{"a":1},"expect_res":"expect_res"},
-  {"case_name":"test2","name":"jack","password":"Iloverose"},
-  {"name":"jack","password":"Iloverose"},
-  {"name":"rose","password":"Ilovejack"},
-  {"name":"tom","password":"password123"}
-]

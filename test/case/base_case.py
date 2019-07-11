@@ -29,8 +29,8 @@ class BaseCaseData(unittest.TestCase):
     def get_case_data(self,case_name):
         return self.test_data.get(case_name)
 
-    def send_request(self,case_name):
-        case_data = self.get_case_data(case_name)
+    def send_request(self,case_data):
+        # case_name = self.get_case_data(case_name)
         headers = case_data.get('headers')
         url = case_data.get('url')
         method = case_data.get('method')
@@ -45,19 +45,19 @@ class BaseCaseData(unittest.TestCase):
                 logging.info(res.status_code)
                 self.assertEqual(expect_res,res.status_code)
             else:
-                res = requests.get(url=url, params=args)
+                res = requests.get(url= url, params= args)
                 logging.info(res.status_code)
                 self.assertEqual(expect_res, res.status_code)
 
         elif method.upper() == "POST" and data_type.upper() == "APPLICATION/JSON":
             res = requests.post(url=url, json=json.loads(args), headers=json.loads(headers))  # JSON格式请求
-            logging.info(case_name, url, args, json.dumps(json.loads(expect_res), sort_keys=True),
+            logging.info( url, args, json.dumps(json.loads(expect_res), sort_keys=True),
                          json.dumps(res.json(), ensure_ascii=False, sort_keys=True))
             self.assertDictEqual(res.json(), json.loads(expect_res))
 
         elif method.upper() == "POST" and data_type.upper() == "FROM":
             res = requests.post(url= url, data= json.loads(args), headers = json.loads(headers))
-            logging.info(case_name,url,args,expect_res,res.text)
+            logging.info(url,args,expect_res,res.text)
             self.assertEqual(expect_res,res.text)
 
 if __name__ == '__main__':

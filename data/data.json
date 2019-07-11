@@ -15,12 +15,20 @@
         },
 		"expect_res": 200
 	},
-	"case_2": {
+	"get_day": {
+		"url": "http://api.juheapi.com/japi/toh",
+		"headers": "",
+		"method": "get",
+		"data_type": "APPLICATION/JSON",
+		"args": "",
+		"expect_res": 200
+	},
+	"case": {
 		"url": "www.baidu.com",
 		"headers": "headers",
-		"method": "POST",
+		"method": "get",
 		"data_type": "APPLICATION/JSON",
-		"args": "ars",
+		"args": "",
 		"expect_res": "expect_res"
 	}
 }

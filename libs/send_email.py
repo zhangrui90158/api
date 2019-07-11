@@ -15,7 +15,7 @@ def send_email(report_file):
     # 3构造附件1，传送当前目录下的文件
     atth = MIMEText(open(report_file,'rb').read(),'base64','utf-8') # 二进制格式打开
     atth["Content-Type"] = 'application/octet-stream'
-    atth["Content-Disposition"] = 'attachment; filename="report.html"'  # filename为邮件中附件显示的名字
+    atth["Content-Disposition"] = 'attachment; filename="report1.html"'  # filename为邮件中附件显示的名字
     msg.attach(atth)
 
     try:
@@ -30,4 +30,6 @@ def send_email(report_file):
         smtp.quit()
 
 if __name__ == '__main__':
+    # send_email(report_file)
+    report_file = os.path.join(prj_path,"report","report1.html")
     send_email(report_file)
