@@ -23,29 +23,31 @@ class BaseCaseData(unittest.TestCase):
     def tearDown(self):
         pass
 
-    # def get_case_name(self,case_name):
-    #     return self.test_data.get(case_name)
+    def get_case_name(self,case_name):
+        return self.test_data.get(case_name)
+
+    def get_case_data(self,case_name):
+        return self.test_data.get(case_name)
 
     def send_request(self,case_name):
-        # case_name = case_data.get('case_name')
-        case_data = self.test_data.get(case_name)
-        url = case_data.get('url')
-        args = case_data.get('args')
+        case_data = self.get_case_data(case_name)
         headers = case_data.get('headers')
-        expect_res = case_data.get('expect_res')
+        url = case_data.get('url')
         method = case_data.get('method')
+        args = case_data.get('args')
+        expect_res = case_data.get('expect_res')
         data_type = case_data.get('data_type')
-        logging.info(url)
-        logging.info(args)
-        logging.info(headers)
-        logging.info(data_type)
-        logging.info(expect_res)
-        logging.info(method)
+        logging.info('url = {0}+ \n + args = {1} + \n + method = {2}'.format(url,args,method))
 
         if method.upper() == "GET":
-            res = requests.get(url= url,params= args)
-            logging.info(res.status_code)
-            self.assertEqual(expect_res,res.status_code)
+            if not args:
+                res = requests.get(url= url)
+                logging.info(res.status_code)
+                self.assertEqual(expect_res,res.status_code)
+            else:
+                res = requests.get(url=url, params=args)
+                logging.info(res.status_code)
+                self.assertEqual(expect_res, res.status_code)
 
         elif method.upper() == "POST" and data_type.upper() == "APPLICATION/JSON":
             res = requests.post(url=url, json=json.loads(args), headers=json.loads(headers))  # JSON格式请求
