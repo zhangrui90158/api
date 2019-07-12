@@ -1,4 +1,4 @@
-from data_driver_interface_framework.test.case.test_case import PasswordWithJsonTestCase
+from data_driver_interface_framework.test.case.case import PasswordWithJsonTestCase
 import unittest
 
 smoke_sutie = unittest.TestSuite()
