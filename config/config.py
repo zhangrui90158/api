@@ -38,7 +38,7 @@ send_email_label= False
 # 邮件配置
 smtp_server = 'smtp.163.com'
 smtp_user = 'test@163.com'
-smtp_password = '11111'
+smtp_password = '111111'
 
 sender = '123123@163.com'  # 发件人
 receiver = '123123@163.com'  # 收件人
