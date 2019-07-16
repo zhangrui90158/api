@@ -1,9 +1,5 @@
 import unittest
-import json
-import os
-import logging
-from data_driver_interface_framework.config.conf import *
-from data_driver_interface_framework.test.case.base_case import BaseCaseData
+from interface_framework.debug.base_case import BaseCaseData
 
 class PasswordWithJsonTestCase(BaseCaseData):
 

@@ -1,8 +1,8 @@
-from data_driver_interface_framework.test.case.basecase import BaseCaseRequest
+from interface_framework.test.case.basecase import BaseCaseRequest
 import os
 import json
 import unittest
-from data_driver_interface_framework.config.conf import *
+from interface_framework.config.conf import *
 import requests
 
 class MyUnittest(unittest.TestCase):
@@ -33,7 +33,7 @@ class MyUnittest(unittest.TestCase):
     def assert_test(self,case_data):
         res = case_data.send_requests()
         expect_res = case_data.expect_res
-        return self.assertEqual(res,expect_res)
+        return self.assertEqual(res.json(),expect_res)
 
 
 if __name__ == '__main__':

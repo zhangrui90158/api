@@ -2,41 +2,95 @@
 	"baidu": {
 		"url": "https://tieba.baidu.com/present/getForumRank",
 		"headers": {
-          "User-Agent":"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
-        },
+			"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+		},
 		"method": "GET",
 		"data_type": "FROM",
-		"args": {
-              "user_id": "256249580",
-              "forum_id": 24,
-              "pn": 0,
-              "ps": 4,
-              "type": 1
-        },
+		"params": {
+			"user_id": "256249580",
+			"forum_id": 24,
+			"pn": 0,
+			"ps": 4,
+			"type": 1
+		},
 		"expect_res": 200
 	},
-	"get_day": {
-		"url": "http://api.juheapi.com/japi/toh",
+	"juhe_caipiao": {
+		"url": "http://apis.juhe.cn/lottery/types",
+		"headers": "",
+		"method": "get",
+		"data_type": "JSON",
+		"params": {
+			"key": "79ac25ba52d33f497a83d592ecb43de7"
+		},
+		"expect_res": {
+			"reason": "查询成功",
+			"result": [{
+					"lottery_id": "ssq",
+					"lottery_name": "双色球",
+					"lottery_type_id": "1",
+					"remarks": "每周二、四、日开奖"
+				},
+				{
+					"lottery_id": "dlt",
+					"lottery_name": "超级大乐透",
+					"lottery_type_id": "2",
+					"remarks": "每周一、三、六开奖"
+				},
+				{
+					"lottery_id": "qlc",
+					"lottery_name": "七乐彩",
+					"lottery_type_id": "1",
+					"remarks": "每周一、三、五开奖"
+				},
+				{
+					"lottery_id": "fcsd",
+					"lottery_name": "福彩3D",
+					"lottery_type_id": "1",
+					"remarks": "每日开奖"
+				},
+				{
+					"lottery_id": "qxc",
+					"lottery_name": "七星彩",
+					"lottery_type_id": "2",
+					"remarks": "每周二、五、日开奖"
+				},
+				{
+					"lottery_id": "pls",
+					"lottery_name": "排列3",
+					"lottery_type_id": "2",
+					"remarks": "每日开奖"
+				},
+				{
+					"lottery_id": "plw",
+					"lottery_name": "排列5",
+					"lottery_type_id": "2",
+					"remarks": "每日开奖"
+				}
+			],
+			"error_code": 0
+		}
+	},
+
+	"juhe_ip": {
+		"url": "http://apis.juhe.cn/ip/ipNew",
 		"headers": "",
 		"method": "get",
 		"data_type": "APPLICATION/JSON",
-		"args": "",
-		"expect_res": 200
-	},
-	"case": {
-		"url": "www.baidu.com",
-		"headers": "headers",
-		"method": "get",
-		"data_type": "APPLICATION/JSON",
-		"args": "",
-		"expect_res": "expect_res"
-	},
-	"case_3": {
-		"url": "www.baidu.com",
-		"headers": "headers",
-		"method": "POST",
-		"data_type": "APPLICATION/JSON",
-		"args": "ars",
-		"expect_res": "expect_res"
+		"params": {
+			"ip": "192.168.1.145",
+			"key": "a32b580d45e6a2a71ea32b8e199e94cb"
+		},
+		"expect_res": {
+			"resultcode": "200",
+			"reason": "查询成功",
+			"result": {
+				"Country": "",
+				"Province": "",
+				"City": "内网IP",
+				"Isp": "内网IP"
+			},
+			"error_code": 0
+		}
 	}
 }

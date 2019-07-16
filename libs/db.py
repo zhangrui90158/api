@@ -1,5 +1,5 @@
 import pymysql
-from data_driver_interface_framework.config.conf import *
+from interface_framework.config.conf import *
 
 class MyMysql():
     def __init__(self):
@@ -18,10 +18,18 @@ class MyMysql():
         self.conn.close()
 
     def query(self,sql):
+        '''
+        :param sql: 传入sql参数
+        :return: 返回查询的所有结果
+        '''
         self.cur.execute(sql)
         return self.cur.fetchall()
 
     def exec(self,sql):
+        '''
+        :param sql: 传入sql参数，提交sql执行
+        :return:
+        '''
         try:
             self.cur.execute(sql)
             self.conn.commit()
@@ -33,4 +41,5 @@ if __name__ == '__main__':
     data = MyMysql()
     sql = "select * from bookinfo"
     result = data.query(sql)
+
 

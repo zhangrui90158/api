@@ -1,72 +1,96 @@
-[2019-07-11 11:04:01] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 11:04:01] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-11 11:04:04] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-11 11:05:25] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 11:05:25] INFO [send_request: basecase.py, 41] url = https://tieba.baidu.com/present/getForumRank,args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1}
-[2019-07-11 11:05:25] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-11 11:05:25] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-11 11:05:25] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-11 11:05:25] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=o0221094702 HTTP/1.1" 200 None
-[2019-07-11 11:05:25] INFO [send_request: basecase.py, 50] 200
-[2019-07-11 11:05:25] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-11 11:05:27] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-11 11:15:59] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 11:15:59] INFO [send_request: basecase.py, 42] url = https://tieba.baidu.com/present/getForumRank+ 
- + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
- + method = GET
-[2019-07-11 11:15:59] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-11 11:15:59] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-11 11:15:59] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-11 11:16:02] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=a0854848492 HTTP/1.1" 200 None
-[2019-07-11 11:16:02] INFO [send_request: basecase.py, 56] 200
-[2019-07-11 11:16:02] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-11 11:16:43] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 11:16:43] INFO [send_request: basecase.py, 42] url = www.sina.com+ 
- + args =  + 
- + method = get
-[2019-07-11 11:16:43] INFO [send_request: basecase.py, 42] url = https://tieba.baidu.com/present/getForumRank+ 
- + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
- + method = GET
-[2019-07-11 11:16:43] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-11 11:16:43] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-11 11:16:43] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-11 11:16:43] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=q0899092156 HTTP/1.1" 200 None
-[2019-07-11 11:16:43] INFO [send_request: basecase.py, 56] 200
-[2019-07-11 11:16:43] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-11 11:28:28] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-11 11:30:00] INFO [send_email: send_email.py, 26] 邮件发送完成！
-[2019-07-11 14:15:07] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 14:15:07] INFO [send_request: base_case.py, 40] url = http://api.juheapi.com/japi/toh+ 
- + args =  + 
- + method = get
-[2019-07-11 14:15:07] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): api.juheapi.com:80
-[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] http://api.juheapi.com:80 "GET /japi/toh HTTP/1.1" 200 73
-[2019-07-11 14:15:09] INFO [send_request: base_case.py, 45] 200
-[2019-07-11 14:15:09] INFO [send_request: base_case.py, 40] url = https://tieba.baidu.com/present/getForumRank+ 
- + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
- + method = GET
-[2019-07-11 14:15:09] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-11 14:15:09] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-11 14:15:09] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=c0804833051 HTTP/1.1" 200 None
-[2019-07-11 14:15:09] INFO [send_request: base_case.py, 49] 200
-[2019-07-11 14:15:09] INFO [run: run.py, 17] ================================== 测试结束 ==================================
-[2019-07-11 14:38:35] INFO [run: run.py, 12] ================================== 测试开始 ==================================
-[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = www.sina.com+ 
- + args =  + 
- + method = get
-[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = http://api.juheapi.com/japi/toh+ 
- + args =  + 
- + method = get
-[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): api.juheapi.com:80
-[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] http://api.juheapi.com:80 "GET /japi/toh HTTP/1.1" 200 73
-[2019-07-11 14:38:35] INFO [send_request: base_case.py, 45] 200
-[2019-07-11 14:38:35] INFO [send_request: base_case.py, 40] url = https://tieba.baidu.com/present/getForumRank+ 
- + args = {'user_id': '256249580', 'forum_id': 24, 'pn': 0, 'ps': 4, 'type': 1} + 
- + method = GET
-[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 813] Starting new HTTPS connection (1): tieba.baidu.com:443
-[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] https://tieba.baidu.com:443 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1 HTTP/1.1" 301 0
-[2019-07-11 14:38:35] DEBUG [_new_conn: connectionpool.py, 205] Starting new HTTP connection (1): tieba.baidu.com:80
-[2019-07-11 14:38:35] DEBUG [_make_request: connectionpool.py, 393] http://tieba.baidu.com:80 "GET /present/getForumRank?user_id=256249580&forum_id=24&pn=0&ps=4&type=1&red_tag=w2210497238 HTTP/1.1" 200 None
-[2019-07-11 14:38:35] INFO [send_request: base_case.py, 49] 200
-[2019-07-11 14:38:35] INFO [run: run.py, 17] ================================== 测试结束 ==================================
+[2019-07-16 11:18:43] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\IndexHandler.py modified; restarting server
+[2019-07-16 11:18:49] WARNING [log_exception: web.py, 1782] 400 POST /insert (192.168.1.16): Missing argument title
+[2019-07-16 11:18:49] WARNING [log_request: web.py, 2246] 400 POST /insert (192.168.1.16) 2.00ms
+[2019-07-16 11:19:15] WARNING [log_exception: web.py, 1782] 400 POST /insert (192.168.1.16): Missing argument title
+[2019-07-16 11:19:15] WARNING [log_request: web.py, 2246] 400 POST /insert (192.168.1.16) 2.00ms
+[2019-07-16 11:21:14] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 11:21:16] WARNING [log_exception: web.py, 1782] 400 POST /insert (192.168.1.16): Missing argument title
+[2019-07-16 11:21:16] WARNING [log_request: web.py, 2246] 400 POST /insert (192.168.1.16) 2.00ms
+[2019-07-16 11:21:50] WARNING [log_exception: web.py, 1782] 400 POST /insert (192.168.1.16): Missing argument title
+[2019-07-16 11:21:50] WARNING [log_request: web.py, 2246] 400 POST /insert (192.168.1.16) 1.00ms
+[2019-07-16 11:22:07] WARNING [log_exception: web.py, 1782] 400 POST /insert (192.168.1.16): Missing argument title
+[2019-07-16 11:22:07] WARNING [log_request: web.py, 2246] 400 POST /insert (192.168.1.16) 2.00ms
+[2019-07-16 11:23:14] INFO [post: IndexHandler.py, 74] title
+[2019-07-16 11:23:14] INFO [log_request: web.py, 2246] 200 POST /insert (192.168.1.16) 29.00ms
+[2019-07-16 11:23:58] INFO [post: IndexHandler.py, 74] title
+[2019-07-16 11:23:59] INFO [log_request: web.py, 2246] 200 POST /insert (192.168.1.16) 261.01ms
+[2019-07-16 11:30:17] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\IndexHandler.py modified; restarting server
+[2019-07-16 11:30:20] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\IndexHandler.py modified; restarting server
+[2019-07-16 13:38:37] ERROR [log_exception: web.py, 1788] Uncaught exception GET /cpp (192.168.1.16)
+HTTPServerRequest(protocol='http', host='192.168.1.16:9000', method='GET', uri='/cpp', version='HTTP/1.1', remote_ip='192.168.1.16')
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 1676, in _execute
+    result = self.prepare()
+  File "F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py", line 20, in prepare
+    if self.request.headers.get("Content-Type").startswith("application/json"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+[2019-07-16 13:38:37] ERROR [log_request: web.py, 2246] 500 GET /cpp (192.168.1.16) 4.00ms
+[2019-07-16 13:38:38] WARNING [log_request: web.py, 2246] 404 GET /favicon.ico (192.168.1.16) 2.00ms
+[2019-07-16 13:39:01] ERROR [log_exception: web.py, 1788] Uncaught exception GET /cpp (192.168.1.16)
+HTTPServerRequest(protocol='http', host='192.168.1.16:9000', method='GET', uri='/cpp', version='HTTP/1.1', remote_ip='192.168.1.16')
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 1676, in _execute
+    result = self.prepare()
+  File "F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py", line 20, in prepare
+    if self.request.headers.get("Content-Type").startswith("application/json"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+[2019-07-16 13:39:01] ERROR [log_request: web.py, 2246] 500 GET /cpp (192.168.1.16) 2.00ms
+[2019-07-16 13:40:14] ERROR [log_exception: web.py, 1788] Uncaught exception GET /cpp (192.168.1.16)
+HTTPServerRequest(protocol='http', host='192.168.1.16:9000', method='GET', uri='/cpp', version='HTTP/1.1', remote_ip='192.168.1.16')
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 1676, in _execute
+    result = self.prepare()
+  File "F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py", line 20, in prepare
+    if self.request.headers.get("Content-Type").startswith("application/json"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+[2019-07-16 13:40:14] ERROR [log_request: web.py, 2246] 500 GET /cpp (192.168.1.16) 1.00ms
+[2019-07-16 13:42:48] ERROR [log_exception: web.py, 1788] Uncaught exception GET /cpp (192.168.1.16)
+HTTPServerRequest(protocol='http', host='192.168.1.16:9000', method='GET', uri='/cpp', version='HTTP/1.1', remote_ip='192.168.1.16')
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 1676, in _execute
+    result = self.prepare()
+  File "F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py", line 20, in prepare
+    if self.request.headers.get("Content-Type").startswith("application/json"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
+[2019-07-16 13:42:48] ERROR [log_request: web.py, 2246] 500 GET /cpp (192.168.1.16) 4.00ms
+[2019-07-16 13:43:30] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 13:47:33] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 13:47:50] INFO [log_request: web.py, 2246] 200 GET /cpp (192.168.1.16) 1.00ms
+[2019-07-16 13:48:41] INFO [log_request: web.py, 2246] 304 GET /cpp (192.168.1.16) 1.00ms
+[2019-07-16 13:49:02] INFO [log_request: web.py, 2246] 304 GET /cpp (192.168.1.16) 1.00ms
+[2019-07-16 13:51:35] ERROR [__exit__: http1connection.py, 67] Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\http1connection.py", line 273, in _read_message
+    delegate.finish()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\routing.py", line 268, in finish
+    self.delegate.finish()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 2293, in finish
+    self.execute()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 2313, in execute
+    self.application, self.request, **self.handler_kwargs
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 233, in __init__
+    self.initialize(**kwargs)  # type: ignore
+TypeError: initialize() missing 1 required positional argument: 'subject'
+[2019-07-16 13:53:44] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 13:53:47] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 13:53:51] ERROR [__exit__: http1connection.py, 67] Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\http1connection.py", line 273, in _read_message
+    delegate.finish()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\routing.py", line 268, in finish
+    self.delegate.finish()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 2293, in finish
+    self.execute()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 2313, in execute
+    self.application, self.request, **self.handler_kwargs
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python36\site-packages\tornado\web.py", line 233, in __init__
+    self.initialize(**kwargs)  # type: ignore
+TypeError: initialize() missing 1 required positional argument: 'subject'
+[2019-07-16 13:54:45] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server
+[2019-07-16 13:55:03] INFO [post: IndexHandler.py, 82] title
+[2019-07-16 13:55:04] INFO [log_request: web.py, 2246] 200 POST /insert (192.168.1.16) 178.01ms
+[2019-07-16 13:55:11] INFO [log_request: web.py, 2246] 200 POST / (192.168.1.16) 1.00ms
+[2019-07-16 13:57:01] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\IndexHandler.py modified; restarting server
+[2019-07-16 13:57:02] INFO [log_request: web.py, 2246] 304 GET /cpp (192.168.1.16) 1.00ms
+[2019-07-16 13:57:09] INFO [log_request: web.py, 2246] 200 GET /python (192.168.1.16) 1.00ms
+[2019-07-16 14:02:00] INFO [_check_file: autoreload.py, 202] F:\PycharmProjects\data_driver_interface_framework\mock_tornado\handlers\BaseHandler.py modified; restarting server

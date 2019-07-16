@@ -1,7 +1,7 @@
 import unittest
 import os
 import json
-from data_driver_interface_framework.config.conf import *
+from interface_framework.config.conf import *
 import requests
 import logging
 
