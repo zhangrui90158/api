@@ -12,7 +12,7 @@ setting = {
 mysql_options = {
 	"host": "192.168.1.1",
     "user": "root",
-	"password": "111111",
+	"password": "1111s11",
 	"database": "test"
 }
 

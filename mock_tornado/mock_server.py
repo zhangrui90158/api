@@ -5,7 +5,6 @@ import tornado.options
 from tornado.options import define,options
 import torndb_for_python3
 import redis
-from interface_framework.mock_tornado.config import *
 from interface_framework.mock_tornado.handlers.urls import handlers
 
 define("port",default= 9000,type= int,help="define default port")
