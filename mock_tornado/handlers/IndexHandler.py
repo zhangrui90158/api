@@ -3,7 +3,7 @@ from interface_framework.config.conf import *
 import json
 class IndexHandler(BaseHandler):
     """
-    接收请求方法，响应数据
+    接收请求方法，响应数据，获取JSON格式数据后返回
     """
     def prepare(self):
         """预解析json数据"""
@@ -14,26 +14,16 @@ class IndexHandler(BaseHandler):
 
     def post(self):
         if self.json_dict:
-            for key, value in self.json_dict.items():
-                self.write("<h3>{0}</h3><p>{1}</p>".format(key,value))
-
+            self.write(self.json_dict)
+            # for key, value in self.json_dict.items():
+            #     self.write("<h3>{0}</h3><p>{1}</p>".format(key,value))
     def get(self):
-        # stu = {
-        #     "name": "zhangsan",
-        #     "age": 24,
-        #     "gender": 1,
-        # }
-        # stu_json = json.dumps(stu)
-        # python_url = self.reverse_url("python_url")
-        # self.write('<a href="{0}">itcast</a>'.format(python_url))
-        # self.write(stu_json)
-        # self.set_status(404)
-        # self.send_error(404)
+
         err_code = self.get_argument("code", None)  # 注意返回的是unicode字符串，下同
         err_title = self.get_argument("title", "")
         err_content = self.get_argument("content", "")
         if err_code:
-            self.send_error(err_code, title=err_title, content=err_content)
+            self.send_error(int(err_code), title=err_title, content=err_content)
         else:
             self.write("主页")
 
@@ -42,10 +32,16 @@ class IndexHandler(BaseHandler):
         self.write(u"<p>错误名：%s</p>" % kwargs["title"])
         self.write(u"<p>错误详情：%s</p>" % kwargs["content"])
 
-    # def post(self):
-    #     query_agrs = self.get_arguments("parms")
-    #     rep =  "<br>missing_args:%s<br/>" % query_agrs
-    #     self.write(rep)
+class IndexJson(BaseHandler):
+
+    def post(self):
+        data = {
+            "name": "zhangsan",
+            "age": 24,
+            "gender": 1,
+        }
+        json_data = json.dumps(data)
+        self.write(json_data)
 
 
 class ItcastHandler(BaseHandler):
@@ -55,7 +51,6 @@ class ItcastHandler(BaseHandler):
 
     def get(self):
         self.write(self.subject)
-
 
 class UploadHandler(BaseHandler):
     """获取上传文件"""
@@ -75,9 +70,13 @@ class SubjectDateHandler(BaseHandler):
     def get(self, date, subject):
         self.write(("Date: %s<br/>Subject: %s" % (date, subject)))
 
-class InsertHandler(BaseHandler):
 
+class InsertHandler(BaseHandler):
     def post(self):
+        """
+        获取请求参数，插入数据库
+        :return:
+        """
         title = self.get_argument("title")
         position = self.get_argument("position")
         price = self.get_argument("price")

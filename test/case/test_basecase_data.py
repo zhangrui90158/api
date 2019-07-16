@@ -1,4 +1,5 @@
 from interface_framework.test.case.basecase import BaseCaseRequest
+from interface_framework.mock_tornado.mock_server import *
 import unittest
 
 
@@ -6,6 +7,7 @@ class MyUnittest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        # main()
         pass
 
     @staticmethod
@@ -25,6 +27,10 @@ class MyUnittest(unittest.TestCase):
 
     def test_juhe_ip(self):
         self.case_data = BaseCaseRequest("juhe_ip")
+        self.assert_test(self.case_data)
+
+    def test_mock_tornado(self):
+        self.case_data = BaseCaseRequest("test_tornado")
         self.assert_test(self.case_data)
 
     def assert_test(self,case_data):

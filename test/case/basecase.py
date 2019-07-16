@@ -56,7 +56,7 @@ class BaseCaseRequest():
             return res
 
         elif self.method.upper() == "POST" and self.data_type.upper() == "JSON":
-            res = requests.post(url= self.url, headers= self.headers, data = json.dumps(self.params)) # JSON格式请求
+            res = requests.post(url= self.url, headers= self.headers, json = self.params) # JSON格式请求
             return res
 
         elif self.method.upper() == "POST" and self.data_type.upper() == "XML":

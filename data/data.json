@@ -92,5 +92,28 @@
 			},
 			"error_code": 0
 		}
+	},
+
+	"test_tornado": {
+		"url": "http://192.168.1.16:9000/",
+		"headers": "",
+		"method": "post",
+		"data_type": "JSON",
+		"params": {
+			"url": "www.baidu.com",
+			"headers": "headers",
+			"method": "POST",
+			"data_type": "APPLICATION/JSON",
+			"args": "ars",
+			"expect_res": "expect_res"
+		},
+		"expect_res": {
+			"url": "www.baidu.com",
+			"headers": "headers",
+			"method": "POST",
+			"data_type": "APPLICATION/JSON",
+			"args": "ars",
+			"expect_res": "expect_res"
+			}
 	}
 }
