@@ -1,9 +1,6 @@
 from interface_framework.test.case.basecase import BaseCaseRequest
-import os
-import json
 import unittest
-from interface_framework.config.conf import *
-import requests
+
 
 class MyUnittest(unittest.TestCase):
 

@@ -1,5 +1,5 @@
 import json
-from interface_framework.config.conf import *
+from conf import *
 import requests
 
 class BaseCaseRequest():

@@ -1,4 +1,4 @@
-from interface_framework.config.conf import *
+from conf import *
 from interface_framework.utils.HTMLTestReportCN import *
 from interface_framework.libs.send_email import send_email
 from interface_framework.test.suite.test_suites import *

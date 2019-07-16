@@ -1,5 +1,5 @@
 from .BaseHandler import BaseHandler
-from interface_framework.config.conf import *
+from conf import *
 import json
 class IndexHandler(BaseHandler):
     """

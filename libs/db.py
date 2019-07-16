@@ -1,5 +1,5 @@
 import pymysql
-from interface_framework.config.conf import *
+from conf import *
 
 class MyMysql():
     def __init__(self):
