@@ -1,5 +1,5 @@
 import pymysql
-from conf import *
+from interface_framework.config.conf import *
 
 #获取连接方法
 def get_db_mysql():
