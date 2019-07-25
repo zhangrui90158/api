@@ -35,7 +35,7 @@ db = 'test'
 
 """mysql服务器配置"""
 mysql_options = {
-	"host": "192.168.1.16",
+	"host": "192.1.1.1",
     "port":3306,
     "user": "root",
 	"password": "123456",
@@ -46,7 +46,7 @@ mysql_options = {
 
 """redis服务器配置"""
 redis_options = {
-    "host" :"192.168.1.16",
+    "host" :"192.1.1.1",
     "port" : 6379
 }
 
