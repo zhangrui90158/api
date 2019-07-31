@@ -109,7 +109,7 @@ def get_mysql_data():
 
 
 def main():
-	url = "http://192.168.1.230:9000/mch/trans_api"
+	url = "http://192.168.1.1:1000/mch/trans_api"
 	parmas = get_refund()
 	headers = get_res_headers(parmas)
 	res = requests.post(url=url, headers= headers, data=json.dumps(parmas))
