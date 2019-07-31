@@ -76,7 +76,7 @@
 		"url": "http://apis.juhe.cn/ip/ipNew",
 		"headers": "",
 		"method": "get",
-		"data_type": "APPLICATION/JSON",
+		"data_type": "JSON",
 		"params": {
 			"ip": "192.168.1.145",
 			"key": "a32b580d45e6a2a71ea32b8e199e94cb"
@@ -103,7 +103,7 @@
 			"url": "www.baidu.com",
 			"headers": "headers",
 			"method": "POST",
-			"data_type": "APPLICATION/JSON",
+			"data_type": "JSON",
 			"args": "ars",
 			"expect_res": "expect_res"
 		},
@@ -111,7 +111,7 @@
 			"url": "www.baidu.com",
 			"headers": "headers",
 			"method": "POST",
-			"data_type": "APPLICATION/JSON",
+			"data_type": "JSON",
 			"args": "ars",
 			"expect_res": "expect_res"
 			}

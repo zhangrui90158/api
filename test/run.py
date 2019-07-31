@@ -10,7 +10,7 @@ def discover():
 def run(suite):
     logging.info("================================== 测试开始 ==================================")
     with open(report_file,"wb") as f:
-        HTMLTestRunner(stream=f, title="项目接口测试 Test", description="测试描述", tester="测试名字").run(suite)
+        HTMLTestRunner(stream=f, title="REALPAY项目接口测试", description="realpay单元测试接口", tester="测试").run(suite)
 
     # send_email('report1.html')  # 发送邮件
     if send_email_label:

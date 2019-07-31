@@ -3,8 +3,7 @@ from interface_framework.config.conf import mysql_options
 
 class My_Pymysql():
     def __init__(self):
-        self.conn = pymysql.connect(**mysql_options
-        )
+        self.conn = pymysql.connect(**mysql_options)
         self.cur = self.conn.cursor()
 
     def __del__(self):
@@ -50,6 +49,7 @@ class My_Pymysql():
 
 if __name__ == '__main__':
     data = My_Pymysql()
-    sql = 'insert into houses (title,position,price,score,comments) values (%s,%s,%s,%s,%s)'
-    result = data.insert(sql,("ceshi","仪式感",100,300,100))
+    sql = "SELECT mch_jrn_nbr FROM merchant_order WHERE mch_nbr = %s and ord_status = %s"
+    # sql = 'insert into houses (title,position,price,score,comments) values (%s,%s,%s,%s,%s)'
+    result = data.get_all(sql,("CNZHRUIDEV","A"))
     print(result)
