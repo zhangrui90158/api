@@ -1,6 +1,5 @@
-from interface_framework.test.case.basecase import BaseCaseRequest
+from interface_framework.libs.base_request import BaseCaseRequest
 from interface_framework.libs.my_mysql import My_Pymysql
-from interface_framework.config.conf import *
 import unittest
 import logging
 
@@ -87,7 +86,7 @@ class MyUnittest(unittest.TestCase):
         case_data = BaseCaseRequest("test_CLCNWECHAT_CNY_not_is_amount")
         res = case_data.send_requests()
         res_data = res.json()
-        logging.info(res_data)
+        logging.info("test_CLCNWECHAT_CNY_not_is_amount res_data={}".format(res_data))
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
 

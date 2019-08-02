@@ -49,5 +49,5 @@ if __name__ == '__main__':
 		}
 	}
     data = DataStructure(header,body)
-    print(data.headers)
     print(data.body)
+    print(data.headers)

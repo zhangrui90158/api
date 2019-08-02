@@ -81,7 +81,7 @@ def get_orderState():
 		"transCode": "200002",
 		"transTime": timeStamp,
 		"param": {
-			"orderJournalNumber": ""
+			"orderJournalNumber": "CL"
 		}
 	}
 	return params
@@ -118,7 +118,7 @@ def get_mysql_data():
 
 def send_requests(queue):
 	url = "http://192.168.1.230:9000/mch/trans_api"
-	parmas = get_orderState()
+	parmas = get_payChannelCode()
 	headers = get_res_headers(parmas)
 	res = requests.post(url=url, headers=headers, data=json.dumps(parmas))
 	print(res.text)
