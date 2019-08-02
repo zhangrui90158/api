@@ -1,6 +1,7 @@
 import json
 from interface_framework.config.conf import *
 import requests
+from interface_framework.libs.data_structure import DataStructure
 from interface_framework.libs.realpay import get_journalNumber,get_sign,get_refund,get_res_headers
 import logging
 
@@ -32,8 +33,9 @@ class BaseCaseRequest():
         self.method = self.case_data.get('method')
         self.params = self.case_data.get('params')
         self.expect_res = self.case_data.get('expect_res')
-        print(self.expect_res)
         self.data_type = self.case_data.get('data_type')
+
+
         logging.info('url = {0}+ \n + params = {1} + \n + method = {2}'.format(self.url, self.params, self.method))
 
     def send_requests(self):
@@ -59,15 +61,18 @@ class BaseCaseRequest():
             return res
 
         elif self.method.upper() == "POST" and self.data_type.upper() == "JSON":
-            if not self.headers:
+            if not self.headers and self.params:
                 '''
                 请求header为空，添加签名、跟商户序列号
                 对请求体进行加签、添加时间戳
                 '''
-                self.params["journalNumber"] = get_journalNumber()
-                self.params["transTime"] = str(int(time.time()*1000))
-                self.headers = {"R-Merchant":"CNZHRUIDEV"}
-                self.headers["R-Signature"] = get_sign(self.params)
+                # self.params["journalNumber"] = get_journalNumber()
+                # self.params["transTime"] = str(int(time.time()*1000))
+                # self.headers = {"R-Merchant":"CNZHRUIDEV"}
+                # self.headers["R-Signature"] = get_sign(self.params)
+                data_structure = DataStructure(self.headers, self.params)
+                self.headers = data_structure.headers
+                self.params = data_structure.body
                 logging.info(self.params)
                 logging.info(self.headers)
                 res = requests.post(url= self.url, headers= self.headers, data = json.dumps(self.params)) # JSON格式请求
@@ -78,8 +83,11 @@ class BaseCaseRequest():
                 对请求体进行加签、添加时间戳
                 对请求body参数进行封装
                 '''
-                self.params = get_refund()
-                self.headers = get_res_headers(self.params)
+                # self.params = get_refund()
+                # self.headers = get_res_headers(self.params)
+                data_structure = DataStructure(self.headers, self.params)
+                self.headers = data_structure.headers
+                self.params = data_structure.body
                 logging.info(self.params)
                 logging.info(self.headers)
                 res = requests.post(url= self.url, headers= self.headers, data= json.dumps(self.params))  # JSON格式请求

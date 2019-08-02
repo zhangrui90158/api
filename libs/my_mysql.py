@@ -49,7 +49,8 @@ class My_Pymysql():
 
 if __name__ == '__main__':
     data = My_Pymysql()
-    sql = "SELECT mch_jrn_nbr FROM merchant_order WHERE mch_nbr = %s and ord_status = %s"
+    sql = "SELECT mch_jrn_nbr,amt FROM merchant_order WHERE mch_nbr = %s and ord_status = %s"
     # sql = 'insert into houses (title,position,price,score,comments) values (%s,%s,%s,%s,%s)'
-    result = data.get_all(sql,("CNZHRUIDEV","A"))
-    print(result)
+    result = data.get_one(sql,("CNZHRUIDEV","S"))
+
+    print(result[1])

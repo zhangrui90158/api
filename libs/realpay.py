@@ -6,24 +6,33 @@ import uuid
 from OpenSSL import crypto
 from interface_framework.libs.my_mysql import My_Pymysql
 from interface_framework.config.conf import *
+from multiprocessing import Manager,Process,Pool
 
-def get_sign(parmas):
+def get_sign(params):
 	"""
-	:param parmas: 读取本地pfx文件，使用私钥进行'sha256'签名
+	:parmas: 读取本地pfx文件，使用私钥进行'sha256'签名
 	:return: base64签名
 	"""
-	p12 = crypto.load_pkcs12(open(pfx_file, 'rb').read(), "123456")
-	sign = crypto.sign(p12.get_privatekey(), json.dumps(parmas), "SHA256")
-	b64_sign = str(base64.b64encode(sign))[2:-1]
-	return b64_sign
+	with open(pfx_file, 'rb') as f:
+		p12 = crypto.load_pkcs12(f.read(), "123456")
+		sign = crypto.sign(p12.get_privatekey(), json.dumps(params), "SHA256")
+		b64_sign = str(base64.b64encode(sign))[2:-1]
+		return b64_sign
 
-def get_res_headers(parmas):
+def get_verify(res_params):
+	with open(pfx_file, 'rb') as f:
+		p12 = crypto.load_pkcs12(f.read(), "123456")
+		signature = crypto.sign(p12.get_privatekey(),json.dumps(res_params),"SHA256")
+		result = crypto.verify(p12.get_certificate(),signature,json.dumps(res_params),"SHA256")
+		return result
+
+def get_res_headers(params):
 	"""
 	:param parmas: 将请求体签名后的字节添加到请求头
 	:return:签名后的请求头
 	"""
 	headers = {"R-Merchant": "CNZHRUIDEV"}
-	headers["R-Signature"] = get_sign(parmas)
+	headers["R-Signature"] = get_sign(params)
 	return headers
 
 def get_journalNumber():
@@ -35,8 +44,8 @@ def get_journalNumber():
 	jNumber = str(base64.b64encode(uid.bytes), encoding="utf-8")
 	return jNumber
 
-def get_params():
-	#组装请求体参数
+def get_order_generated_params():
+	#组装生成订单请求体参数
 	params = {
 		"version": "1.0",
 		"journalNumber": get_journalNumber(),
@@ -45,9 +54,9 @@ def get_params():
 		"param": {
 			"payChannelCode": "CLCNWECHAT",
 			"currency": "CNY",
-			"amount": "-1.05",
-			"productName": "POHNE",
-			"productDetail": "iPhone x",
+			"amount": "-1.2522",
+			"productName": "",
+			"productDetail": "",
 			"notifyWithReserveFiled": "Y"
 		}
 	}
@@ -60,7 +69,7 @@ def get_payChannelCode():
 		"transCode": "100001",
 		"transTime": timeStamp,
 		"param": {
-			"bizType": "CL"
+			"bizType": ""
 		}
 	}
 	return params
@@ -72,7 +81,22 @@ def get_orderState():
 		"transCode": "200002",
 		"transTime": timeStamp,
 		"param": {
-			"orderJournalNumber": ""
+			"orderJournalNumber": "201907180001"
+		}
+	}
+	return params
+
+
+def get_refund_succeed():
+	params = {
+		"version": "1.0",
+		"journalNumber": get_journalNumber(),
+		"transCode": "200003",
+		"transTime": timeStamp,
+		"param": {
+			"orderJournalNumber": "201907190001",
+			"refundAmount":"1.25",
+			"refundMessage":"refund"
 		}
 	}
 	return params
@@ -104,16 +128,26 @@ def get_mysql_data():
 	"""
 	mysql_db = My_Pymysql()
 	sql = "SELECT mch_jrn_nbr,amt FROM merchant_order WHERE mch_nbr = %s and ord_status = %s"
-	data = mysql_db.get_one(sql, ("CNZHRUIDEV", "A"))
+	data = mysql_db.get_one(sql, ("CNZHRUIDEV", "S"))
 	return data
 
+def send_requests(queue):
+	url = "http://192.168.1.230:9000/mch/trans_api"
+	parmas = get_orderState()
+	headers = get_res_headers(parmas)
+	res = requests.post(url=url, headers=headers, data=json.dumps(parmas))
+	print(res.text)
+	verify = get_verify(res.text)
+	print(verify)
+	queue.put(res)
 
 def main():
-	url = "http://192.168.1.230:9000/mch/trans_api"
-	parmas = get_refund()
-	headers = get_res_headers(parmas)
-	res = requests.post(url=url, headers= headers, data=json.dumps(parmas))
-	print(res.text)
+	pool = Pool()
+	queue = Manager().Queue()
+	pool.apply_async(send_requests,args=(queue,))
+	pool.close()
+	pool.join()
+
 
 if __name__ == '__main__':
 	main()

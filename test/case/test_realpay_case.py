@@ -1,5 +1,6 @@
 from interface_framework.test.case.basecase import BaseCaseRequest
 from interface_framework.libs.my_mysql import My_Pymysql
+from interface_framework.config.conf import *
 import unittest
 import logging
 
@@ -58,8 +59,16 @@ class MyUnittest(unittest.TestCase):
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
 
-    def test_CLCNWECHAT(self):
-        case_data = BaseCaseRequest("test_CLCNWECHAT")
+    def test_CLCNWECHAT_create_order(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_create_order")
+        res = case_data.send_requests()
+        res_data = res.json()
+        logging.info(res_data)
+        expect_res = case_data.expect_res
+        self.assertEqual(res_data, expect_res)
+
+    def test_CLVNMOMOPAY_order(self):
+        case_data = BaseCaseRequest("test_CLVNMOMOPAY_order")
         res = case_data.send_requests()
         res_data = res.json()
         logging.info(res_data)
@@ -74,8 +83,8 @@ class MyUnittest(unittest.TestCase):
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
 
-    def test_CLCNWECHAT_CNY_notis_amount(self):
-        case_data = BaseCaseRequest("test_CLCNWECHAT_CNY_notis_amount")
+    def test_CLCNWECHAT_CNY_not_is_amount(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_CNY_not_is_amount")
         res = case_data.send_requests()
         res_data = res.json()
         logging.info(res_data)
@@ -93,7 +102,7 @@ class MyUnittest(unittest.TestCase):
     def test_CLCNWECHAT_ORDERSTATE_fail(self):
         case_data = BaseCaseRequest("test_CLCNWECHAT_ORDERSTATE_fail")
         res = case_data.send_requests()
-        res_data = res.json()
+        res_data = res.json().get("result")
         logging.info(res_data)
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
@@ -101,7 +110,7 @@ class MyUnittest(unittest.TestCase):
     def test_CLCNWECHAT_ORDERSTATE_succeed(self):
         case_data = BaseCaseRequest("test_CLCNWECHAT_ORDERSTATE_succeed")
         res = case_data.send_requests()
-        res_data = res.json()
+        res_data = res.json().get("result")
         logging.info(res_data)
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
@@ -109,7 +118,7 @@ class MyUnittest(unittest.TestCase):
     def test_CLCNWECHAT_ORDERSTATE_accept(self):
         case_data = BaseCaseRequest("test_CLCNWECHAT_ORDERSTATE_accept")
         res = case_data.send_requests()
-        res_data = res.json()
+        res_data = res.json().get("result")
         logging.info(res_data)
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
@@ -117,7 +126,7 @@ class MyUnittest(unittest.TestCase):
     def test_CLCNWECHAT_ORDERSTATE_processed(self):
         case_data = BaseCaseRequest("test_CLCNWECHAT_ORDERSTATE_processed")
         res = case_data.send_requests()
-        res_data = res.json()
+        res_data = res.json().get("result")
         logging.info(res_data)
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
@@ -125,7 +134,7 @@ class MyUnittest(unittest.TestCase):
     def test_CLCNWECHAT_ORDER_is_null(self):
         case_data = BaseCaseRequest("test_CLCNWECHAT_ORDER_is_null")
         res = case_data.send_requests()
-        res_data = res.json()
+        res_data = res.json().get("message")
         logging.info(res_data)
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
@@ -146,7 +155,37 @@ class MyUnittest(unittest.TestCase):
         expect_res = case_data.expect_res
         self.assertEqual(res_data, expect_res)
 
+    def test_CLCNWECHAT_refund_succeed(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_refund_succeed")
+        res = case_data.send_requests()
+        res_data = res.json()
+        logging.info(res_data)
+        expect_res = case_data.expect_res
+        self.assertEqual(res_data, expect_res)
 
+    def test_CLCNWECHAT_refund_amount_max(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_refund_amount_max")
+        res = case_data.send_requests()
+        res_data = res.json()
+        logging.info(res_data)
+        expect_res = case_data.expect_res
+        self.assertEqual(res_data, expect_res)
+
+    def test_CLCNWECHAT_refund_orderJournalNumber_is_null(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_refund_orderJournalNumber_is_null")
+        res = case_data.send_requests()
+        res_data = res.json()
+        logging.info(res_data)
+        expect_res = case_data.expect_res
+        self.assertEqual(res_data, expect_res)
+
+    def test_CLCNWECHAT_refund_amount_is_minus(self):
+        case_data = BaseCaseRequest("test_CLCNWECHAT_refund_amount_is_minus")
+        res = case_data.send_requests()
+        res_data = res.json()
+        logging.info(res_data)
+        expect_res = case_data.expect_res
+        self.assertEqual(res_data, expect_res)
 
     def assert_test(self,case_data):
         res = case_data.send_requests()
@@ -154,5 +193,8 @@ class MyUnittest(unittest.TestCase):
         return self.assertEqual(res.json(),expect_res)
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+    suite = unittest.TestSuite()
+    suite.addTest(MyUnittest("test_payChannelCode_is_CLCNWECHAT"))
+    unittest.TextTestRunner(verbosity=3).run(suite)
 
