@@ -44,8 +44,8 @@ def get_journalNumber():
 	jNumber = str(base64.b64encode(uid.bytes), encoding="utf-8")
 	return jNumber
 
-def get_order_generated_params():
-	#组装生成订单请求体参数
+def get_params():
+	#组装请求体参数
 	params = {
 		"version": "1.0",
 		"journalNumber": get_journalNumber(),
@@ -54,9 +54,9 @@ def get_order_generated_params():
 		"param": {
 			"payChannelCode": "CLCNWECHAT",
 			"currency": "CNY",
-			"amount": "-1.2522",
-			"productName": "",
-			"productDetail": "",
+			"amount": "-1.05",
+			"productName": "POHNE",
+			"productDetail": "iPhone x",
 			"notifyWithReserveFiled": "Y"
 		}
 	}
@@ -69,7 +69,7 @@ def get_payChannelCode():
 		"transCode": "100001",
 		"transTime": timeStamp,
 		"param": {
-			"bizType": ""
+			"bizType": "CL"
 		}
 	}
 	return params
@@ -81,22 +81,7 @@ def get_orderState():
 		"transCode": "200002",
 		"transTime": timeStamp,
 		"param": {
-			"orderJournalNumber": "201907180001"
-		}
-	}
-	return params
-
-
-def get_refund_succeed():
-	params = {
-		"version": "1.0",
-		"journalNumber": get_journalNumber(),
-		"transCode": "200003",
-		"transTime": timeStamp,
-		"param": {
-			"orderJournalNumber": "201907190001",
-			"refundAmount":"1.25",
-			"refundMessage":"refund"
+			"orderJournalNumber": ""
 		}
 	}
 	return params
