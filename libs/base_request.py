@@ -2,7 +2,6 @@ import json
 from interface_framework.config.conf import *
 import requests
 from interface_framework.libs.data_structure import DataStructure
-from interface_framework.libs.realpay import get_journalNumber,get_sign,get_refund,get_res_headers
 import logging
 
 class BaseCaseRequest():
@@ -74,9 +73,11 @@ class BaseCaseRequest():
                 logging.info(self.headers)
                 res = requests.post(url= self.url, headers= self.headers, data = json.dumps(self.params)) # JSON格式请求
                 return res
-            else:
+            elif self.headers and self.params:
                 res = requests.post(url=self.url, headers=self.headers, data=json.dumps(self.params))  # JSON格式请求
                 return res
+            else:
+                return
 
         elif self.method.upper() == "POST" and self.data_type.upper() == "XML":
             res = requests.post(url= self.url, headers= self.headers, data= self.params)

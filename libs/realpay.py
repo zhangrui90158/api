@@ -15,7 +15,7 @@ def get_sign(params):
 	"""
 	with open(pfx_file, 'rb') as f:
 		p12 = crypto.load_pkcs12(f.read(), "123456")
-		sign = crypto.sign(p12.get_privatekey(), json.dumps(params), "SHA256")
+		sign = crypto.sign(p12.get_privatekey(), json.dumps(params).encode("utf-8"), "SHA256")
 		b64_sign = str(base64.b64encode(sign))[2:-1]
 		return b64_sign
 
@@ -44,17 +44,19 @@ def get_journalNumber():
 	jNumber = str(base64.b64encode(uid.bytes), encoding="utf-8")
 	return jNumber
 
-def get_params():
+def get_pay_params():
 	#组装请求体参数
 	params = {
 		"version": "1.0",
-		"journalNumber": get_journalNumber(),
+		"journalNumber":get_journalNumber(),
 		"transCode": "200001",
 		"transTime": timeStamp,
+		"endpointIp":"192.168.1.153",
+		"notifyUrl":"http://localhost:5000/api/pay",
 		"param": {
 			"payChannelCode": "CLCNWECHAT",
 			"currency": "CNY",
-			"amount": "-1.05",
+			"amount": "0.20",
 			"productName": "POHNE",
 			"productDetail": "iPhone x",
 			"notifyWithReserveFiled": "Y"
@@ -64,10 +66,11 @@ def get_params():
 
 def get_payChannelCode():
 	params = {
-		"version": "1.0",
-		"journalNumber": get_journalNumber(),
+		"version": "",
+		"journalNumber": "",
 		"transCode": "100001",
 		"transTime": timeStamp,
+		"endpointIp": "192.168.1.153",
 		"param": {
 			"bizType": "CL"
 		}
@@ -80,31 +83,49 @@ def get_orderState():
 		"journalNumber": get_journalNumber(),
 		"transCode": "200002",
 		"transTime": timeStamp,
+		"endpointIp": "192.168.1.153",
 		"param": {
-			"orderJournalNumber": "CL"
+			"orderJournalNumber": "201908061001"
 		}
 	}
 	return params
 
-def get_refund():
+def get_refund_params():
 	"""组装从数据库获取到的参数
 	:return:
 	"""
-	data = get_mysql_data()
-	orderJournalNumber = str(data[0])
-	refundAmount = str(data[1])
+	# data = get_mysql_data()
+	# orderJournalNumber = str(data[0])
+	# refundAmount = str(data[1])
 	params = {
 		"version": "1.0",
 		"journalNumber": get_journalNumber(),
 		"transCode": "200003",
 		"transTime": timeStamp,
+		"notifyUrl": "http://localhost:5000/api/refund",
+		"endpointIp": "192.168.1.153",
 		"param": {
-			"orderJournalNumber": orderJournalNumber,
-			"refundAmount":refundAmount,
+			"orderJournalNumber": "iZYB9gE6QG+YjcFEtJNCpg==",
+			"refundAmount":"0.20",
 			"refundMessage":"refund"
 		}
 	}
 	return params
+
+def get_clearing_file():
+	params = {
+		"version": "1.0",
+		"journalNumber": get_journalNumber(),
+		"transCode": "200004",
+		"transTime": timeStamp,
+		"endpointIp": "192.168.1.153",
+		"param": {
+			"settleDate": "20190807",
+			"bizType":"CL"
+		}
+	}
+	return params
+
 
 def get_mysql_data():
 	"""
@@ -117,25 +138,31 @@ def get_mysql_data():
 	return data
 
 def send_requests(queue):
-	url = "http://192.168.1.230:9000/mch/trans_api"
-	parmas = get_payChannelCode()
-	headers = get_res_headers(parmas)
-	res = requests.post(url=url, headers=headers, data=json.dumps(parmas))
-	print(res.text)
-	verify = get_verify(res.text)
-	print(verify)
+	url = "http://123.207.250.215:9000/mch/trans_api"
+	# params = get_payChannelCode()
+	# params = get_pay_params()
+	# params = get_orderState()
+	# params = get_refund_params()
+	params = get_clearing_file()
+	headers = get_res_headers(params)
+	res = requests.post(url= url, headers= headers, data= json.dumps(params))
+	print(res.json())
 	queue.put(res)
+	# verify = get_verify(res.text)
+	# print(verify)
 
 def main():
-	pool = Pool()
+	pool = Pool(4)
 	queue = Manager().Queue()
-	pool.apply_async(send_requests,args=(queue,))
+	for i in range(1):
+		pool.apply_async(send_requests,args=(queue,))
 	pool.close()
 	pool.join()
 
 
 if __name__ == '__main__':
 	main()
+
 
 
 

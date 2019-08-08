@@ -17,8 +17,12 @@ class DataStructure():
 
     @property
     def body(self):
-        self.__body["journalNumber"] = DataStructure.get_journalNumber()
-        self.__body["transTime"] = str(int(time.time() * 1000))
+        if not self.__body["journalNumber"]:
+            self.__body["journalNumber"] = DataStructure.get_journalNumber()
+        elif not self.__body["transTime"]:
+            self.__body["transTime"] = str(int(time.time() * 1000))
+        elif not self.__body["endpointIp"]:
+            self.__body["endpointIp"] = "192.168.1.153"
         return self.__body
 
     @staticmethod
