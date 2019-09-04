@@ -1,6 +1,98 @@
 from .BaseHandler import BaseHandler
 from interface_framework.config.conf import *
 import json
+
+
+class IndexPayJson(BaseHandler):
+
+    def prepare(self):
+        """预解析json数据"""
+        if self.request.headers.get("Content-Type").startswith("application/json"):
+            self.res_params = json.loads(self.request.body)
+        else:
+            self.res_params = None
+
+    def post(self):
+        data = {"code":"0000","message":"pay status is succeed"}
+        json_data = json.dumps(data)
+        if self.res_params["journalNumber"]== "" or self.res_params["orderStatus"] == "":
+            self.write(self.res_params)
+        else:
+            self.write(json_data)
+
+class IndexRefundJson(BaseHandler):
+
+    def prepare(self):
+        """预解析json数据"""
+        if self.request.headers.get("Content-Type").startswith("application/json"):
+            self.res_params = json.loads(self.request.body)
+        else:
+            self.res_params = None
+
+    def post(self):
+        data = {"code":"0000","message":"pay status is succeed"}
+        json_data = json.dumps(data)
+        if self.res_params["journalNumber"]== "" or self.res_params["orderStatus"] == "":
+            self.write(self.res_params)
+        else:
+            self.write(json_data)
+
+
+class PayStatusHandler(BaseHandler):
+    """
+    接收请求方法，响应数据，获取JSON格式数据后返回
+    """
+    def prepare(self):
+        """预解析json数据"""
+        if self.request.headers.get("Content-Type").startswith("application/json"):
+            self.pay_body = json.loads(self.request.body)
+        else:
+            self.pay_body = None
+
+    def post(self):
+        if self.pay_body:
+            # self.write(self.pay_body)
+            # print(self.pay_body)
+            for key, value in self.pay_body.items():
+                self.write(value)
+
+    def get(self):
+        err_code = self.get_argument("code", None)  # 注意返回的是unicode字符串，下同
+        err_title = self.get_argument("title", "")
+        err_content = self.get_argument("content", "")
+        if err_code:
+            self.send_error(int(err_code), title=err_title, content=err_content)
+        else:
+            self.write("主页")
+
+    def write_error(self, status_code: int, **kwargs):
+        self.write(u"<h1>出错了，程序员GG正在赶过来！</h1>")
+        self.write(u"<p>错误名：%s</p>" % kwargs["title"])
+        self.write(u"<p>错误详情：%s</p>" % kwargs["content"])
+
+
+class InsertHandler(BaseHandler):
+    def post(self):
+        """
+        获取请求参数，插入数据库
+        :return:
+        """
+        title = self.get_argument("title")
+        position = self.get_argument("position")
+        price = self.get_argument("price")
+        score = self.get_argument("score")
+        comments = self.get_argument("comments")
+        logging.info(title)
+        try:
+            ret = self.application.mydb.execute("insert into houses(title, position, price, score, comments) values""(%s, %s, %s, %s, %s)",
+                                                title, position, price, score, comments)
+        except Exception as e:
+            self.write("DB error:%s" % e)
+        else:
+            self.write("OK %d" % ret)
+        self.write("数据写入成功")
+
+
 class IndexHandler(BaseHandler):
     """
     接收请求方法，响应数据，获取JSON格式数据后返回
@@ -32,16 +124,7 @@ class IndexHandler(BaseHandler):
         self.write(u"<p>错误名：%s</p>" % kwargs["title"])
         self.write(u"<p>错误详情：%s</p>" % kwargs["content"])
 
-class IndexJson(BaseHandler):
 
-    def post(self):
-        data = {
-            "name": "zhangsan",
-            "age": 24,
-            "gender": 1,
-        }
-        json_data = json.dumps(data)
-        self.write(json_data)
 
 
 class ItcastHandler(BaseHandler):
@@ -71,23 +154,3 @@ class SubjectDateHandler(BaseHandler):
         self.write(("Date: %s<br/>Subject: %s" % (date, subject)))
 
 
-class InsertHandler(BaseHandler):
-    def post(self):
-        """
-        获取请求参数，插入数据库
-        :return:
-        """
-        title = self.get_argument("title")
-        position = self.get_argument("position")
-        price = self.get_argument("price")
-        score = self.get_argument("score")
-        comments = self.get_argument("comments")
-        logging.info(title)
-        try:
-            ret = self.application.mydb.execute("insert into houses(title, position, price, score, comments) values""(%s, %s, %s, %s, %s)",
-                                                title, position, price, score, comments)
-        except Exception as e:
-            self.write("DB error:%s" % e)
-        else:
-            self.write("OK %d" % ret)
-        self.write("数据写入成功")

@@ -1,0 +1,1542 @@
+{
+	"test_requests_header_Merchant_is_not_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": {
+			"R-Merchant": "CNZHRUIDEVVV",
+			"R-Signature":"VgPQOqJmVKCb77TCQwq9UEtz62XATNtPX/fEJcZOJsZbxVmtolFjev7nolZjMgh7xCOmJZZ9TFE3GaKmPNESZnxPx3JmFlUtDfDWOdBXpLfr+aWp+Fr9xnBhLyc5syZv8G9zETBXj3QERoyQIovWVTLm+NYghpe8kS521Bz3+Ng="},
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1001"
+	},
+
+	"test_requests_header_Merchant_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": {
+			"R-Merchant": "CNZHRUIDEVVV",
+			"R-Signature":""},
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1001"
+	},
+
+	"test_requests_header_Signature_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": {
+			"R-Merchant": "CNZHRUIDEV",
+			"R-Signature":"VgPQOqJmVKCb77TCQwq9UEtz62XATNtPX/fEJcZOJsZbxVmtolFjev7nolZjMgh7xCOmJZZ9TFE3GaKmPNESZnxPx3JmFlUtDfDWOdBXpLfr+aWp+Fr9xnBhLyc5syZv8G9zETBXj3QERoyQIovWVTLm+NYghpe8kS521Bz3+Ng="},
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1002"
+	},
+
+	"test_requests_header_Signature_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": {
+			"R-Merchant": "CNZHRUIDEV",
+			"R-Signature":""},
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1001"
+	},
+
+
+	"test_requests_base_body_version_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "2.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "0000"
+	},
+
+	"test_requests_base_body_version_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "0000"
+	},
+
+	"test_requests_base_body_version_is_overlength": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.1212145421212",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_journalNumber_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.1212145421212",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_journalNumber_is_overlength": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.1212145421212",
+			"transCode": "100001",
+			"journalNumber":"qweqweqweqweqweqweqweqwesdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsd",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_journalNumber_is_repetition": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"notifyUrl":"http://localhost:5000/api/pay",
+			"journalNumber":"NjxxC+uOQ/6+ggG91o2Taw==",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "0.01",
+				"productName": "TEST",
+				"productDetail": "iPhone x",
+				"notifyWithReserveFiled": "Y"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_transCode_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_transCode_is_overlength": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "121231231",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+
+	"test_transCode_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "121231",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_get_payChannelCode_CL": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": [{"payChannelCode":"CLVNMOMOPAY","payCompanyName":"Mobile Money"},{"payChannelCode":"CLCNWECHAT","payCompanyName":"微信支付"}]
+	},
+
+	"test_get_payChannelCode_RF": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "RF"
+			}
+		},
+		"expect_res": [{"payChannelCode":"RFVNMOMOPAY","payCompanyName":"Mobile Money"},{"payChannelCode":"RFCNWECHAT","payCompanyName":"微信支付"}]
+	},
+
+	"test_payChannelCode_is_not_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "AM"
+			}
+		},
+		"expect_res": []
+	},
+
+	"test_payChannelCode_is_NULL": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": ""
+			}
+		},
+		"expect_res": [{"payChannelCode":"CLVNMOMOPAY","payCompanyName":"Mobile Money"},{"payChannelCode":"RFVNMOMOPAY","payCompanyName":"Mobile Money"},{"payChannelCode":"CLCNWECHAT","payCompanyName":"微信支付"},{"payChannelCode":"RFCNWECHAT","payCompanyName":"微信支付"}]
+	},
+
+	"test_payChannelCode_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CC"
+			}
+		},
+		"expect_res": []
+	},
+
+	"test_transTime_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "100001",
+			"journalNumber":"",
+			"transTime":"ASDFASDASDAS",
+			"endpointIp":"",
+			"param": {
+				"bizType": "CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+
+	"test_CLCNWECHAT_create_order": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl":"http://localhost:5000/api/pay",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "0.01",
+				"expireTime": "20200809110000",
+				"productName": "TEST",
+				"productDetail": "iPhone x",
+				"notifyWithReserveFiled": "Y"
+			}
+		},
+		"expect_res": ""
+	},
+
+	"test_CLCNWECHAT_payChannelCode_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "",
+				"currency": "CNY",
+				"amount": "1.01",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1016"
+	},
+
+	"test_CLCNWECHAT_payChannelCode_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "testerror",
+				"currency": "CNY",
+				"amount": "1.01",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1016"
+	},
+
+	"test_CLCNWECHAT_amount_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_amount_is_int": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": 1.00,
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": ""
+	},
+
+	"test_CLCNWECHAT_amount_is_minus": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "-1.80",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_amount_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "test",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_amount_is_overlength": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNY",
+				"amount": "1.8000000",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1000"
+	},
+
+	"test_CLCNWECHAT_currency_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CNYYC",
+				"amount": "1.80",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_currency_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "",
+				"amount": "1.80",
+				"expireTime": "20200809110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_expireTime_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CYN",
+				"amount": "1.80",
+				"expireTime": "",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_CLCNWECHAT_expireTime_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CYN",
+				"amount": "1.80",
+				"expireTime": "11000020190807",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_CLCNWECHAT_expireTime_is_less": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLCNWECHAT",
+				"currency": "CYN",
+				"amount": "1.80",
+				"expireTime": "20190807110000",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+
+
+	"test_CLCNWECHAT_ORDERSTATE_fail": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": "VE7T8WDyRA2pTKDvuQz07Q=="
+			}
+		},
+		"expect_res": "F"
+	},
+
+	"test_CLCNWECHAT_ORDERSTATE_succeed": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": "wfuOE7elRsqN3QO9jZBJ6g=="
+			}
+		},
+		"expect_res": "S"
+	},
+
+	"test_CLCNWECHAT_ORDERSTATE_accept": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": "zga7hQSjQKGhSuh3LSyMQA=="
+			}
+		},
+		"expect_res": {"orderStatus": "A"}
+	},
+
+	"test_CLCNWECHAT_ORDERSTATE_processed": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": "mi52/gacSpyi3WKdZGlTeQ=="
+			}
+		},
+		"expect_res": {"orderStatus": "P"}
+	},
+
+	"test_CLCNWECHAT_ORDER_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": ""
+			}
+		},
+		"expect_res": "BIZ_1005"
+	},
+
+	"test_CLCNWECHAT_ORDER_is_unauthorized": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200002",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"orderJournalNumber": "201908061001"
+			}
+		},
+		"expect_res": "BIZ_1005"
+	},
+
+	"test_CLCNWECHAT_refund_order_is_unauthorized": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "201908060002",
+				"refundAmount":"0.10",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1005"
+	},
+
+	"test_CLCNWECHAT_refund_order_is_not_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "testssdfjhsjkdfhjshdfjhsdjhfjksdhfjkhsdjkfhjksdhfjkshdjfhsdjkfhjksdhfkjhjskjdhfjk",
+				"refundAmount":"0.10",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_refund_order_is_not_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "",
+				"refundAmount":"0.10",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1005"
+	},
+
+	"test_CLCNWECHAT_refund_order_state_is_P": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "mi52/gacSpyi3WKdZGlTeQ==",
+				"refundAmount":"1.0",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1017"
+	},
+
+	"test_CLCNWECHAT_refund_order_state_is_F": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "SO3VEij8TPyLdEMjCTpLgQ==",
+				"refundAmount":"1.0",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1017"
+	},
+
+	"test_CLCNWECHAT_refundAmount_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "7qGabC9IQ1yDHViadnAJNA==",
+				"refundAmount":"1.00",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_refundAmount_order_is_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "iZYB9gE6QG+YjcFEtJNCpg==",
+				"refundAmount":"0.20",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1016"
+	},
+
+	"test_CLCNWECHAT_refundAmount_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "7qGabC9IQ1yDHViadnAJNA==",
+				"refundAmount":"",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_refundAmount_is_minus": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/api/refund",
+			"param": {
+				"orderJournalNumber": "7qGabC9IQ1yDHViadnAJNA==",
+				"refundAmount":"-0.20",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLCNWECHAT_refund_succeed": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200003",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"notifyUrl": "http://localhost:5000/mch_callback",
+			"param": {
+				"orderJournalNumber": "Y32m5YtjTsez35tgfmeu7Q==",
+				"refundAmount":"0.10",
+				"refundMessage":"refund"
+			}
+		},
+		"expect_res": {"code":"0000","message":"","result":{"orderStatus":"F"},"serverTransTime":1564553212690,"transCode":"200002","version":"1.0"}
+	},
+
+	"test_cl_account_bill_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "20190828",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": ""
+	},
+
+	"test_cl_account_bill_not_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "20200806",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": "BIZ_1006"
+	},
+
+	"test_account_bill_settleDateformat_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "2019080344",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_account_bill_settleDate_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_rf_account_bill_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "20190808",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": ""
+	},
+
+	"test_rf_account_bill_not_exists": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "20290806",
+				"bizType":"CL"
+			}
+		},
+		"expect_res": "BIZ_1006"
+	},
+
+	"test_account_bill_bizType_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			"version": "1.0",
+			"transCode": "200004",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"settleDate": "20290806",
+				"bizType":""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_account_bill_bizType_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber":"",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				 "currency": "",
+				 "amount": 0.1,
+				 "payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				 "payeeType": "WECHAT_OPENID",
+				 "payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+
+	"test_payment_currency_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "",
+				"amount": 0.1,
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payment_currency_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "USD",
+				"amount": 0.1,
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payment_currency_is_over_length": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "USDDD",
+				"amount": 0.1,
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payment_amount_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "CNY",
+				"amount": "",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payment_amount_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "CNY",
+				"amount": "test",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payment_amount_is_empty": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeAccount_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeAccount_is_empty": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeAccount_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeType_is_not_exits": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "TEST",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeType_is_not_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeType_is_not_empty": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeType_is_not_over_length": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "asdasdjfsjdfhjshjsd$#$%$#$%%%ASFDSDFSDFSDF",
+				"payeeName": "张锐"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeName_is_null": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": ""
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeName_is_error": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID",
+				"payeeName": "a123123"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+	"test_payeeName_is_empty": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params":{
+			 "version": "1.0",
+			 "journalNumber": "",
+			 "transCode": "210001",
+			 "transTime": "",
+			 "endpointIp": "192.168.1.1",
+			 "notifyUrl": "http://localhost:5000/api/pay",
+			"param": {
+				"amount": "0.1",
+				"currency": "CNY",
+				"payeeAccount": "ox8XOvlQcJ47VVtpp-Et4fY47Bvo",
+				"payeeType": "WECHAT_OPENID"
+			}
+		},
+		"expect_res": "BIZ_1003"
+	},
+
+	"test_CLVNMOMOPAY_order": {
+		"url": "http://123.207.250.215:9000/mch/trans_api",
+		"headers": "",
+		"method": "POST",
+		"data_type": "JSON",
+		"params": {
+			"version": "1.0",
+			"transCode": "200001",
+			"journalNumber":"",
+			"transTime":"",
+			"endpointIp":"",
+			"param": {
+				"payChannelCode": "CLVNMOMOPAY",
+				"currency": "CNY",
+				"amount": "1.01",
+				"productName": "",
+				"productDetail": "",
+				"notifyWithReserveFiled": ""
+			}
+		},
+		"expect_res": ""
+	},
+
+	"test_tornado": {
+		"url": "http://192.168.1.16:9000/",
+		"headers": "",
+		"method": "post",
+		"data_type": "JSON",
+		"params": {
+			"url": "www.baidu.com",
+			"headers": "headers",
+			"method": "POST",
+			"data_type": "JSON",
+			"args": "ars",
+			"expect_res": "expect_res"
+		},
+		"expect_res": {
+			"url": "www.baidu.com",
+			"headers": "headers",
+			"method": "POST",
+			"data_type": "JSON",
+			"args": "ars",
+			"expect_res": "expect_res"
+		}
+	}
+}

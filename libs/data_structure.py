@@ -32,8 +32,8 @@ class DataStructure():
         :return: base64签名
         """
         with open(pfx_file, 'rb') as f:
-            p12 = crypto.load_pkcs12(f.read(), "123456")
-            sign = crypto.sign(p12.get_privatekey(), json.dumps(res_body), "SHA256")
+            p12 = crypto.load_pkcs12(f.read(), b"123456")
+            sign = crypto.sign(p12.get_privatekey(), json.dumps(res_body).encode("utf-8"), "SHA256")
             b64_sign = str(base64.b64encode(sign))[2:-1]
             return b64_sign
 

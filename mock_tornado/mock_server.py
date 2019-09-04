@@ -9,7 +9,6 @@ from interface_framework.mock_tornado.handlers.urls import handlers
 from interface_framework.mock_tornado.conf import *
 
 define("port",default= 9000,type= int,help="define default port")
-
 class Application(tornado.web.Application):
     def __init__(self,*args,**kwargs):
         super(Application,self).__init__(*args,**kwargs)

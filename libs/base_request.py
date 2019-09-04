@@ -25,7 +25,7 @@ class BaseCaseRequest():
         self.params = case_data.get('params')
         self.expect_res = case_data.get('expect_res')
         self.data_type = case_data.get('data_type')
-        logging.info('url = {0}+ \n + params = {1} + \n + method = {2}'.format(self.url, self.params, self.method))
+        logging.info('url == {0}+ \n + headers == {1}+ \n + params == {2} + \n + method == {3}'.format(self.url,self.headers, self.params, self.method))
     
     @staticmethod
     def init_test_data(case_name):

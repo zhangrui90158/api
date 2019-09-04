@@ -6,7 +6,7 @@ import uuid
 from OpenSSL import crypto
 from interface_framework.libs.my_mysql import My_Pymysql
 from interface_framework.config.conf import *
-from multiprocessing import Manager,Process,Pool
+from multiprocessing import Manager,Pool
 
 def get_sign(params):
 	"""
@@ -46,18 +46,21 @@ def get_journalNumber():
 
 def get_pay_params():
 	#组装请求体参数
+	productName = random.sample(["mac","vr","ar","pc","phone"],1)
+	amount = random.randint(1,1000)
 	params = {
 		"version": "1.0",
 		"journalNumber":get_journalNumber(),
 		"transCode": "200001",
 		"transTime": timeStamp,
-		"endpointIp":"192.168.1.153",
+		"endpointIp":"A157:CD01:3579:1526:DBAC:EF21:4356:7879",
 		"notifyUrl":"http://localhost:5000/api/pay",
 		"param": {
 			"payChannelCode": "CLCNWECHAT",
 			"currency": "CNY",
-			"amount": "0.20",
-			"productName": "POHNE",
+			"amount": "0.01",
+			"expireTime":"20290813113100",
+			"productName": productName[0],
 			"productDetail": "iPhone x",
 			"notifyWithReserveFiled": "Y"
 		}
@@ -85,7 +88,7 @@ def get_orderState():
 		"transTime": timeStamp,
 		"endpointIp": "192.168.1.153",
 		"param": {
-			"orderJournalNumber": "201908061001"
+			"orderJournalNumber": "bm+yVfdIRo2C2Av9hHSbww=="
 		}
 	}
 	return params
@@ -105,8 +108,8 @@ def get_refund_params():
 		"notifyUrl": "http://localhost:5000/api/refund",
 		"endpointIp": "192.168.1.153",
 		"param": {
-			"orderJournalNumber": "iZYB9gE6QG+YjcFEtJNCpg==",
-			"refundAmount":"0.20",
+			"orderJournalNumber": "seLdaL5CT9WTf0ZatPjRrw==",
+			"refundAmount":"0.02",
 			"refundMessage":"refund"
 		}
 	}
@@ -120,7 +123,7 @@ def get_clearing_file():
 		"transTime": timeStamp,
 		"endpointIp": "192.168.1.153",
 		"param": {
-			"settleDate": "20190807",
+			"settleDate": "20190808",
 			"bizType":"CL"
 		}
 	}
@@ -139,14 +142,17 @@ def get_mysql_data():
 
 def send_requests(queue):
 	url = "http://123.207.250.215:9000/mch/trans_api"
-	# params = get_payChannelCode()
-	# params = get_pay_params()
-	# params = get_orderState()
-	# params = get_refund_params()
-	params = get_clearing_file()
-	headers = get_res_headers(params)
-	res = requests.post(url= url, headers= headers, data= json.dumps(params))
+	channel_params = get_payChannelCode()
+	pay_params = get_pay_params()
+	order_state_params = get_orderState()
+	refund_params = get_refund_params()
+	bill_params = get_clearing_file()
+	headers = get_res_headers(refund_params)
+	res = requests.post(url= url, headers= headers, data= json.dumps(refund_params))
 	print(res.json())
+	# bill = res.json().get("result").get("statements")
+	# account_bill = base64.b64decode(bill)
+	# print(account_bill)
 	queue.put(res)
 	# verify = get_verify(res.text)
 	# print(verify)
@@ -156,12 +162,16 @@ def main():
 	queue = Manager().Queue()
 	for i in range(1):
 		pool.apply_async(send_requests,args=(queue,))
+		time.sleep(0.1)
+		print("已经创建订单{0}笔".format(i))
 	pool.close()
 	pool.join()
 
-
 if __name__ == '__main__':
+	star_time = int(time.time() * 1000)
 	main()
+	end_time = int(time.time() * 1000)
+	print(end_time - star_time)
 
 
 

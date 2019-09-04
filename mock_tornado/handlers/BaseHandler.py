@@ -1,6 +1,4 @@
 from tornado.web import RequestHandler
-import json
-
 
 class BaseHandler(RequestHandler):
     '''
