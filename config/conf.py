@@ -36,7 +36,7 @@ logging.basicConfig(
 db_host = '192.168.1.152'
 db_port = 3306
 db_user = 'root'
-db_passwd = 'Real@1768'
+db_passwd = '111111'
 db = 'test'
 
 """mysql服务器配置"""
