@@ -41,10 +41,10 @@ db = 'test'
 
 """mysql服务器配置"""
 mysql_options = {
-    "host": "192.168.1.170",
+    "host": "192.168.1.1",
     "port":3306,
     "user": "root",
-    "password": "Real@1768",
+    "password": "12333333",
     "database": "real-pay",
     "charset":"utf8"
 }
@@ -60,7 +60,7 @@ send_email_label= False
 # 邮件配置
 smtp_server = 'smtp.163.com'
 smtp_user = 'yiqiniutest@163.com'
-smtp_password = 'a12345678'
+smtp_password = 'a111111111'
 
 sender = 'yiqiniutest@163.com'  # 发件人
 receiver = 'zhangrui@yiqiniu.com'  # 收件人
